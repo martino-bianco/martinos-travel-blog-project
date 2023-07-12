@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./style.css" />
+
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js"></script>
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css"
+      rel="stylesheet"
+    />
+
+    <title>Travel Blog</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <!-- <div id="myLogo">MyLogo3000</div> -->
+        <ul id="menu">
+          <li><a href="./indexLighthouse.html">Home</a></li>
+          <li><a href="./aboutMe.html"> About me</a></li>
+          <li><a href="./suggestions.html"> Suggestions</a></li>
+          <li>
+            <a
+              href="https://shop.audiolith.net/Moped-Ascona-Kismet-Habibi-12-Vinyl-Album_1"
+            >
+              Shop</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div id="hero">
+      <h1>Martinos Boring Travel Blog</h1>
+      <h2 id="catchPhrase">Helping people to fall asleep since 2023</h2>
+    </div>
+
+    <!-- --------------------------------------------the cards---------------------------------------------- -->
+    <div id="cardWrapper">
+      <h2 id="cardTitel">My latest "adventures":</h2>
+      <div id="destinationParent">
+        <div id="destinations">
+          <!-- bari -->
+          <div id="bariCard" class="card">
+            <a href="./bariLightbox.html">
+              <img
+                src="./HCS Project Pics/bari/bari_harbour_night.jpeg"
+                alt=""
+                style="width: 100%"
+              />
+              <div class="container">
+                <h4><b>Bari</b></h4>
+                <p>Italy</p>
+                <p>June 2023</p>
+              </div></a
+            >
+          </div>
+          <!-- napoli -->
+          <div class="card">
+            <a href="./napoliLightbox.html">
+              <img
+                src="./HCS Project Pics/napoli/napoli_castle.JPG"
+                alt=""
+                style="width: 100%"
+              />
+              <div class="container">
+                <h4><b>Naples</b></h4>
+                <p>Italy</p>
+                <p>June 2023</p>
+              </div></a
+            >
+          </div>
+          <!-- rome -->
+          <div class="card">
+            <a href="./romeLightbox.html">
+              <img
+                src="./HCS Project Pics/roma/rome_at_night.JPG"
+                alt="Street in Rome at night"
+                style="width: 100%"
+              />
+              <div class="container">
+                <h4><b>Rome</b></h4>
+                <p>Italy</p>
+                <p>June 2022</p>
+              </div></a
+            >
+          </div>
+          <!-- monopoli -->
+          <div class="card">
+            <a href="./monopoliLightbox.html">
+              <img
+                src="./HCS Project Pics/Monopoli/monopoli_harbour.jpeg"
+                alt="The harbour of Monopoli"
+                style="width: 100%"
+              />
+              <div class="container">
+                <h4><b>Monopoli</b></h4>
+                <p>Italy</p>
+                <p>June 2023</p>
+              </div></a
+            >
+          </div>
+
+          <!-- firenze -->
+          <div class="card">
+            <a href="./florenceLightbox.html">
+              <img
+                src="./HCS Project Pics/firenze/firenze_roof.JPG"
+                alt=""
+                style="width: 100%"
+              />
+              <div class="container">
+                <h4><b>Florence</b></h4>
+                <p>Italy</p>
+                <p>June 2022</p>
+              </div></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <!------------------------------------------------------- the map: -------------------------------->
+    <div id="mapParent">
+      <div id="map" style="width: 800px; height: 400px"></div>
+    </div>
+    <script>
+      mapboxgl.accessToken =
+        "pk.eyJ1IjoibWFydGluLWJpYW5jbyIsImEiOiJjbGp2NDdlOG4xY3FiM2psbG0zMjZnOTY3In0.lGTYBbEfzfoLG_a1aHl5Zg";
+      var map = new mapboxgl.Map({
+        container: "map",
+        style: "mapbox://styles/mapbox/streets-v11",
+        style: "mapbox://styles/mapbox/streets-v12",
+        center: [13.928129, 42.456912],
+        zoom: 5,
+      });
+      const markerBari = new mapboxgl.Marker()
+        .setLngLat([16.871871, 41.117143])
+        .addTo(map);
+      const markerNaples = new mapboxgl.Marker()
+        .setLngLat([14.25, 40.8333])
+        .addTo(map);
+      const markerFlorence = new mapboxgl.Marker()
+        .setLngLat([11.2542, 43.7714])
+        .addTo(map);
+      const markerMonopoli = new mapboxgl.Marker()
+        .setLngLat([17.2905, 40.9571])
+        .addTo(map);
+      const markerRome = new mapboxgl.Marker()
+        .setLngLat([12.4828, 41.8931])
+        .addTo(map);
+    </script>
+
+    <footer>
+      <div id="footer">
+        <div><a href="./indexLighthouse.html"> Home</a></div>
+      </div>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>

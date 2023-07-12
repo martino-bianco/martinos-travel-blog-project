@@ -1,0 +1,506 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+body {
+  background-color: rgb(78, 189, 152);
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+h1,
+h2,
+h3 {
+  color: white;
+  text-align: center;
+  flex-wrap: wrap;
+  margin: 50px;
+}
+
+h1 {
+  font-size: 100px;
+}
+
+h2 {
+  font-size: 50px;
+  margin-bottom: 50px;
+}
+
+#cardTitel {
+  margin-top: 100px;
+}
+
+h4 {
+  font-size: 30px;
+}
+
+button {
+  margin-top: 20px;
+}
+
+.text {
+  font-size: 30px;
+}
+
+a,
+li,
+nav {
+  all: unset;
+}
+
+nav {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  height: 100px;
+  background-color: aquamarine;
+  margin: 0;
+}
+
+footer {
+  height: 100px;
+  background-color: aquamarine;
+  margin: 0;
+}
+
+/* #catchPhrase {
+  margin-top: 140px;
+  transform: rotate(23deg);
+  font-size: 26px;
+} */
+/* ------------------the heroes----------------------- */
+/* lightbox */
+
+#hero {
+  background-image: url("./HCS\ Project\ Pics/index/bari_tunnel.jpeg");
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  box-sizing: border-box;
+  margin-bottom: 100px;
+  height: 600px;
+  padding: 50px;
+}
+
+#heroPic {
+  width: 100vw;
+}
+
+#bariHero {
+  background-image: url("./HCS\ Project\ Pics/bari/bari_public_viewing.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  background-position: center center;
+  box-sizing: border-box;
+  margin-bottom: 100px;
+  width: 100%;
+  height: 600px;
+  padding: 50px;
+  columns: white;
+}
+
+#florenceHero {
+  background-image: url("./HCS Project Pics/firenze/firenze_roof.JPG");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  box-sizing: border-box;
+  margin-bottom: 100px;
+  height: 600px;
+  padding: 50px;
+  columns: white;
+  object-fit: cover;
+}
+
+#monopoliHero {
+  background-image: url("./HCS\ Project\ Pics/monopoli/monopoli_harbour.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  box-sizing: border-box;
+  margin-bottom: 100px;
+  height: 600px;
+  padding: 50px;
+  columns: white;
+}
+
+#naplesHero {
+  background-image: url("./HCS\ Project\ Pics/napoli/napoli_night_harbour.JPG");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  box-sizing: border-box;
+  margin-bottom: 100px;
+  height: 600px;
+  padding: 50px;
+  columns: white;
+}
+
+#polignanoHero {
+  background-image: url("./HCS\ Project\ Pics/polignano_a_mare/polignano_wall.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  box-sizing: border-box;
+  margin-bottom: 100px;
+  height: 600px;
+  padding: 50px;
+  columns: white;
+}
+
+#romeHero {
+  background-image: url("./HCS\ Project\ Pics/roma/rome_at_night.JPG");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  box-sizing: border-box;
+  margin-bottom: 100px;
+  height: 600px;
+  padding: 50px;
+  columns: white;
+}
+
+/* weather in heroes */
+
+.weatherBlock {
+  color: white;
+  font-size: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(0, 255, 255, 0);
+  margin-bottom: 100px;
+  backdrop-filter: blur(5px);
+  max-width: 30000px;
+
+  /* backdrop-filter: blur(10px);
+  width: auto;
+  height: auto; */
+}
+
+/* ----------------------------the menu and the footer---------------------------- */
+
+#menu {
+  color: grey;
+  font-size: 30px;
+  display: flex;
+  /* flex-shrink: 1; */
+  justify-content: flex-end;
+  margin-right: 26px;
+}
+#footer {
+  color: grey;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+#menu > li,
+#footer > div {
+  padding: 20px;
+  margin-left: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: aqua;
+  border-bottom-right-radius: 20px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+#menu > li:hover,
+#footer > div:hover {
+  box-shadow: 0 16px 32px 0 rgb(0, 0, 0);
+}
+
+/* ---------------------the gallery-------------------------- */
+
+/* lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  text-align: center;
+}
+
+.lightbox-img {
+  max-width: 90%;
+  max-height: 80%;
+  margin-top: 5%;
+}
+
+.lightbox-img:hover {
+  cursor: pointer;
+}
+
+/* lightbox */
+
+#galleryWrapperParent {
+  margin: 100px;
+}
+
+.pictureGallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.galleryPictures {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pictureGallery img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin: 5px;
+  cursor: pointer;
+  transition: transform 0.3s;
+  border-radius: 5px;
+}
+.pictureGallery img:hover {
+  transform: scale(0.9) rotate(-5deg);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.full-img {
+  width: 100%;
+  height: 100vh;
+  background: rgba(250, 250, 250, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.full-img img {
+  width: 90%;
+  max-width: 500px;
+}
+
+.full-img span {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  font-size: 50px;
+  cursor: pointer;
+  color: grey;
+}
+/* -----------------the cards---------------------- */
+
+/* #cardWrapper {
+  padding: 50px;
+} */
+
+#destinationParent {
+  width: auto;
+  /* background-color: beige; */
+  display: flex;
+  justify-content: center;
+}
+
+#destinations {
+  width: 80vw;
+  /* background-color: aqua; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+
+.card {
+  width: 180px;
+  background-color: aqua;
+  border-bottom-right-radius: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 16px 32px 0 rgb(0, 0, 0);
+}
+
+.container {
+  padding: 2px 16px;
+  color: grey;
+}
+
+.galleryWrapperParent {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.galleryWrapper {
+  width: 80vw;
+  margin: 15px;
+  border: 5px solid black;
+}
+
+.gallery {
+  max-height: 300px;
+  max-width: 300px;
+  position: relative;
+  float: left;
+  margin: 15px;
+}
+
+.galleryText {
+  color: white;
+  font-size: 24px;
+  margin: 15px;
+}
+
+/* ----------------------------about me----------------------------------- */
+#aboutMeDiv {
+  width: 60vw;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: black; */
+}
+
+#martinoImg {
+  float: right;
+}
+
+p {
+  text-align: justify;
+}
+
+/* ------------------------------------------suggestions----------------------------------------- */
+fieldset {
+  color: white;
+  width: 100px;
+}
+
+input {
+  display: block;
+  margin: 0.5rem 0;
+}
+
+/* -------------------the map-------------------------- */
+
+#mapParent {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+/* -------------------the suggestion and about me---------------------- */
+
+#suggestionsWrapper {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+
+  /* margin-bottom: -100px;
+  padding-bottom: 100px; */
+}
+
+.wrapper {
+  min-height: 100%;
+  margin-bottom: 100px;
+  padding-bottom: 100px;
+}
+
+/* -------------@media------- */
+
+@media screen and (max-width: 700px) {
+  h1 {
+    font-size: 48px;
+    margin-top: 40px;
+  }
+
+  h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+
+  h4 {
+    font-size: 24px;
+  }
+
+  .text {
+    font-size: 24px;
+  }
+
+  .pictureGallery img {
+    width: 150px;
+    height: 150px;
+  }
+
+  #menu {
+    font-size: 24px;
+  }
+
+  #footer {
+    font-size: 24px;
+  }
+
+  #menu > div,
+  #footer > div {
+    padding: 15px;
+    margin-left: 10px;
+    border-radius: 15px;
+  }
+
+  #destinations {
+    width: 80%;
+  }
+
+  .card {
+    width: 180px;
+    border-bottom-right-radius: 20px;
+  }
+
+  .container {
+    padding: 5px 16px;
+  }
+
+  #aboutMeDiv {
+    width: 80%;
+  }
+
+  p {
+    font-size: 20px;
+  }
+
+  .weatherBlock {
+    color: white;
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 255, 255, 0);
+    margin-bottom: 100px;
+    backdrop-filter: blur(5px);
+  }
+}
