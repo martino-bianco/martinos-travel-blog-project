@@ -12,4 +12,4 @@ the suggestion:
 
 I think how I structured the form could be considered bad form, but it works to a certain degree.
 
-Have fun exploring the page!
+Have fun exploring the page.
